@@ -147,7 +147,7 @@
                 .then(response => response.json())
                 .then(data => {
                     const resultDiv = document.getElementById('result');
-                    resultDiv.innerHTML = '<img id="loading" src="loading.gif" alt="로딩 중">'; // 로딩 중 이미지 초기화
+                    resultDiv.innerHTML = '<img id="loading" src="https://mblogthumb-phinf.pstatic.net/MjAxODEwMjNfNjAg/MDAxNTQwMjg2OTk2NTcw.mfWKPtzKVO1mJaBBIFKIkVBlMQQIF1Vc-yrlbbGaoP0g.KNJWAgMmhsfQrZI3n0UT-LMi_qpHAZls4qPMvbNaJBcg.GIF.chingguhl/Spinner-1s-200px.gif?type=w800" alt="로딩 중">'; // 로딩 중 이미지 초기화
                     document.getElementById('loading').style.display = 'none'; // 로딩 중 메시지 숨기기
 
                     if (data.error) {

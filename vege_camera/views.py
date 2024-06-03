@@ -8,8 +8,18 @@ import io
 import time
 import json
 
-# Configuration for AI model
-api_key = "AIzaSyAGWE9NYRKn-TReMckj_-dkneVzvhJPuFE"
+import os
+from dotenv import load_dotenv
+
+# BASE_DIR 설정 (프로젝트 루트 디렉토리)
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+# .env 파일의 경로를 지정
+dotenv_path = os.path.join(BASE_DIR, '.env')
+load_dotenv(dotenv_path)
+
+# 환경 변수에서 API 키 가져오기
+api_key = os.getenv('api_key')
 
 generation_config = {
   "temperature": 1,
