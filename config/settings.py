@@ -25,7 +25,9 @@ SECRET_KEY = 'django-insecure-vq0o%=x^661lbp*-3hwm5d2n32f(+3(!do1!kb8giw+1xky+#c
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    'https://port-0-vegan-dish-checker-2scwz2alu6xhl1a.sel5.cloudtype.app/',
+]
 
 
 # Application definition
