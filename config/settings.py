@@ -27,6 +27,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = [
     'port-0-vegan-dish-checker-2scwz2alu6xhl1a.sel5.cloudtype.app',
+    '*',
 ]
 
 # Application definition

@@ -107,10 +107,10 @@ def construct_prompt(image):
 
     # 프롬프트 생성
     task_details = (
-        "Let's think step by step. 엄격하고 까다롭게 채식주의 음식을 판별하라. 한국음식에는 멸치 육수, 젓갈이 많이 사용된다는 사실을 참고해서 채식 음식을 판별하라. "
+        "Let's think step by step. Use of Chain of Thought. 엄격하고 까다롭게 채식주의 음식을 판별하라. 한국음식에는 멸치 육수, 젓갈이 많이 사용된다는 사실을 참고해서 채식 음식을 판별하라. "
         "ROLE: 너는 채식 음식 판별가야; "
         "YOUR TASK IS: "
-        "1. 이 음식이 무엇인지 추론하라. ONLY 고유 한국음식명만 한 단어로 출력하라. ex) 된장찌개, 잡채, 김치, 송편 등등. Write in English"
+        "1. 이 음식이 무엇인지 추론하라. 이 음식은 한국 음식일 확률이 높다. ONLY 고유 한국음식명만 한 단어로 출력하라. ex) 된장찌개, 잡채, 김치, 송편 등등. Write in English"
         "2. 사진의 음식이 비건 푸드일 확률을 100점 만점으로 나타내라. 예를 들면 채소면 매우 높을 확률, 스테이크면 매우 낮을 확률이다., ONLY NUMERIC VALUES ARE ACCEPTED. Write in English"
         "3. 왜 그렇게 생각하는지 이유를 구체적으로 설명하라. Write in English"
         "4. 이 사진에 대한 비건 관련 질문을 생성하라. ex) 이 요리에 고기, 생선, 유제품, 계란 같은 동물성 재료가 들어가나요?. Write in Korean"
@@ -122,7 +122,7 @@ def construct_prompt(image):
       "3. reasoning: <phrase>"
       "4. question: <phrase>"
     )
-    full_prompt = f"Base64 Image:{image_base64}\n{task_details}\n{response_format}\n"
+    full_prompt = f"{task_details}\n{response_format}\n\nBase64 Image: {image_base64}"
     return full_prompt
 
 # Create your views here.
